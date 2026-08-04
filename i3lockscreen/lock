@@ -1,0 +1,41 @@
+#!/bin/sh
+
+IMAGE="$HOME/Pictures/lockscreen-1080p.png"
+
+BLACK='#000000'
+WHITE='#ffffff'
+HIDDEN='#00000000'
+TEXT='#ffffff'
+FONT='NuCaloric'
+
+i3lock \
+--nofork \
+-i "$IMAGE" \
+-c 000000 \
+\
+--inside-color=$BLACK        \
+--insidever-color=$BLACK     \
+--insidewrong-color=$BLACK   \
+--ring-color=$BLACK          \
+--ringver-color=$BLACK       \
+--ringwrong-color=$BLACK     \
+--line-color=$BLACK          \
+--separator-color=$BLACK     \
+\
+--keyhl-color=$WHITE         \
+--bshl-color=$WHITE          \
+\
+--time-color=$HIDDEN         \
+--timeoutline-color=$HIDDEN  \
+--date-color=$HIDDEN         \
+--dateoutline-color=$HIDDEN  \
+\
+--verif-color=$TEXT          \
+--verif-font=$FONT           \
+--wrong-color=$TEXT          \
+--wrong-font=$FONT           \
+--layout-color=$TEXT         \
+--layout-font=$FONT          \
+--greeter-color=$TEXT        \
+--greeter-font=$FONT         \
+--modif-color=$TEXT
