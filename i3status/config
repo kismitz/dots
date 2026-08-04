@@ -1,0 +1,75 @@
+
+
+# My i3status bar for my thinkpad t480s. This machine will be fully configured by me (hopefully lol)
+# September 2025
+
+
+
+
+
+general {
+
+	colors = true
+	color_good = "#00bfff"
+	color_degraded = "#6e1044"
+	color_bad = "#ff1500"
+	interval = 1
+#	seperator = "|"
+}
+
+order += "tztime local"
+order += "cpu_usage"
+order += "memory"
+order += "battery 0"
+order += "wireless wlan0"
+order += "ethernet enp0s31f6" 
+
+
+
+
+
+tztime local {
+
+format = "TIME: %Y-%m-%d %H:%M"
+
+}
+
+
+cpu_usage {
+
+	format = "CPU LOAD: %usage"
+	degraded_threshold = 90
+	max_threshold = 95
+}
+
+ethernet enp0s31f6 {
+	
+	format_up = "ETH CON: %speed"
+	format_down = " NO ETH "
+
+}
+
+wireless wlan0 {
+
+	format_up = "CON: %essid QUAL:%quality "
+	format_down = "NO CON"
+
+}
+
+battery 0 {
+	
+	format = "BATT: %percentage"
+	last_full_capacity = true
+	threshold_type = percentage
+	low_threshold = 25
+
+}
+
+memory {
+
+	memory_used_method = classical
+	format = "MEM: %used/%total"
+
+}
+
+
