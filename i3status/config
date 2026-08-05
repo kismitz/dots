@@ -9,12 +9,15 @@
 
 general {
 
+
 	colors = true
 	color_good = "#00bfff"
 	color_degraded = "#6e1044"
 	color_bad = "#ff1500"
 	interval = 1
-#	seperator = "|"
+  
+
+  #	seperator = "|"
 }
 
 order += "tztime local"
